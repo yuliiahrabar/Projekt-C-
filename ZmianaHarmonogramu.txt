@@ -1,0 +1,29 @@
+Poprzednia wersja harmonogramu pracy
+
+13.10.16 - Plan projektu
+20.10.16
+27.10.16 
+03.11.16 - Prezentacja techniczna: Laczenie sie z baza danych SQL z poziomu C++. 
+	   Milestone 1: Zrobiona do konca baza danych w SQL
+10.11.16
+17.11.16 - Milestone 2: Program C++
+
+24.11.16 - Prezentacja techniczna: Biblioteka Wt
+08.12.16 - Milestone 3: Aplikacja mobilna dla pracownika 
+
+15.12.16 - Prezentacja prototypu
+10.01.17 - Data oddania koncowego projektu. DEADLINE
+12.01.17 - Prezentacja projektu
+
+Harmonogram pracy
+
+13.10.16 - Plan projektu
+
+03.11.16 - Prezentacja techniczna: Laczenie sie z baza danych SQL z poziomu C++. 
+	   Milestone 1: Zrobiona do konca baza danych w SQL
+10.11.16
+08.12.16 - Milestone 2: Program C++
+
+11.01.17 - Milestone 3: Zrobiony graficzny interfejs uzytkwnika
+
+12.01.17 - Prezentacja prototypu. Data oddania koncowego projektu
