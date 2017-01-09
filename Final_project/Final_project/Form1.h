@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include "Form2.h"
+
 namespace Final_project {
 
 	using namespace System;
@@ -69,12 +71,13 @@ namespace Final_project {
 
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::GroupBox^  groupBox1;
-	private: System::Windows::Forms::TextBox^  id_product;
-	private: System::Windows::Forms::Label^  label3;
+
+
 	private: System::Windows::Forms::DataGridView^  dataGridView3;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Button^  button4;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -110,12 +113,11 @@ namespace Final_project {
 			this->year = (gcnew System::Windows::Forms::TextBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->id_product = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView2))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -203,7 +205,7 @@ namespace Final_project {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(204)));
-			this->label5->Location = System::Drawing::Point(199, 80);
+			this->label5->Location = System::Drawing::Point(147, 80);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(42, 20);
 			this->label5->TabIndex = 7;
@@ -214,7 +216,7 @@ namespace Final_project {
 			this->label14->AutoSize = true;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(204)));
-			this->label14->Location = System::Drawing::Point(84, 80);
+			this->label14->Location = System::Drawing::Point(23, 80);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(77, 20);
 			this->label14->TabIndex = 8;
@@ -234,7 +236,7 @@ namespace Final_project {
 			// 
 			// amount
 			// 
-			this->amount->Location = System::Drawing::Point(247, 77);
+			this->amount->Location = System::Drawing::Point(195, 77);
 			this->amount->Name = L"amount";
 			this->amount->Size = System::Drawing::Size(23, 26);
 			this->amount->TabIndex = 10;
@@ -248,7 +250,7 @@ namespace Final_project {
 			// 
 			// category
 			// 
-			this->category->Location = System::Drawing::Point(167, 77);
+			this->category->Location = System::Drawing::Point(110, 77);
 			this->category->Name = L"category";
 			this->category->Size = System::Drawing::Size(26, 26);
 			this->category->TabIndex = 12;
@@ -299,8 +301,6 @@ namespace Final_project {
 			// 
 			// groupBox1
 			// 
-			this->groupBox1->Controls->Add(this->id_product);
-			this->groupBox1->Controls->Add(this->label3);
 			this->groupBox1->Controls->Add(this->year);
 			this->groupBox1->Controls->Add(this->month);
 			this->groupBox1->Controls->Add(this->day);
@@ -319,25 +319,7 @@ namespace Final_project {
 			this->groupBox1->Size = System::Drawing::Size(313, 214);
 			this->groupBox1->TabIndex = 19;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Dodaj produkt";
-			// 
-			// id_product
-			// 
-			this->id_product->Location = System::Drawing::Point(52, 77);
-			this->id_product->Name = L"id_product";
-			this->id_product->Size = System::Drawing::Size(26, 26);
-			this->id_product->TabIndex = 19;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(23, 80);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(23, 20);
-			this->label3->TabIndex = 18;
-			this->label3->Text = L"Id";
+			this->groupBox1->Text = L"Dodaj nowy produkt";
 			// 
 			// dataGridView3
 			// 
@@ -384,12 +366,25 @@ namespace Final_project {
 			this->label8->TabIndex = 23;
 			this->label8->Text = L"Kategoria 4 (do 3 dni)";
 			// 
+			// button4
+			// 
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(204)));
+			this->button4->Location = System::Drawing::Point(412, 257);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(158, 59);
+			this->button4->TabIndex = 24;
+			this->button4->Text = L"Pokaż wszystkie produkty";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Lavender;
 			this->ClientSize = System::Drawing::Size(758, 489);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label4);
@@ -415,6 +410,40 @@ namespace Final_project {
 		}
 #pragma endregion
 
+		int count_number_of_tables(){
+
+			 String^ constring=L"datasource=localhost;port=3306;username=yhrabar;password=sweden;database=fresh";
+			 MySqlConnection^ conDataBase=gcnew MySqlConnection(constring);
+			 conDataBase->Open();
+
+			 // Get number of rows in list which is equal to number of tables with products
+			 MySqlCommand^ count_rows=gcnew MySqlCommand("SELECT COUNT(*) FROM list;", conDataBase);
+			 MySqlDataReader^ myReader_count;
+			 myReader_count =count_rows->ExecuteReader();
+			 int Number_of_Tables;
+				while(myReader_count->Read()) 
+					{
+						Number_of_Tables = (myReader_count->GetInt32(0));
+					 }
+			    myReader_count->Close();
+			 return Number_of_Tables;
+		}
+
+		void mySQL_do_command(String^ command){
+				 
+			 String^ constring=L"datasource=localhost;port=3306;username=yhrabar;password=sweden;database=fresh";
+		     MySqlConnection^ conDataBase=gcnew MySqlConnection(constring);
+			 MySqlCommand^ cmdDataBase=gcnew MySqlCommand(command, conDataBase);
+		     MySqlDataReader^ myReader;
+		     conDataBase->Open();
+
+			 myReader=cmdDataBase->ExecuteReader();
+				 while(myReader->Read()) 
+					{
+					 }
+			     myReader->Close();
+
+			 }
 
 		 void fill_table (String^ table_query, int i){
 			
@@ -491,25 +520,16 @@ namespace Final_project {
 					   number_of_days = 28;
 					   else
 					   number_of_days = 31;}
-
+				
 
 
 			 // Connection to database fresh
 			 String^ constring=L"datasource=localhost;port=3306;username=yhrabar;password=sweden;database=fresh";
 			 MySqlConnection^ conDataBase=gcnew MySqlConnection(constring);
 			 conDataBase->Open();
-
+			 
 			 // Get number of rows in list which is equal to number of tables with products
-			 MySqlCommand^ count_rows=gcnew MySqlCommand("SELECT COUNT(*) FROM list;", conDataBase);
-			 MySqlDataReader^ myReader_count;
-			 myReader_count =count_rows->ExecuteReader();
-				while(myReader_count->Read()) 
-					{
-						Number_of_Tables = (myReader_count->GetInt32(0));
-					 }
-			    myReader_count->Close();
-
-
+			 Number_of_Tables = count_number_of_tables();
 
 			 //Get type of the product for all products in the table
 			 MySqlDataReader^ myReader_type;
@@ -598,55 +618,31 @@ namespace Final_project {
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Application::Exit();
 		 }
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-
-			 String^ constring=L"datasource=localhost;port=3306;username=yhrabar;password=sweden;database=fresh";
-			 String^ insert1;
-			 String^ create_table;
-			 String^ insert2;
-			 insert1 = "INSERT INTO list VALUES ('"+ this-> id_product ->Text + "' , '" + this-> name_product ->Text + "' , '" + this-> category ->Text + "' );";
-			 create_table = "CREATE TABLE l"+ this-> id_product ->Text + " ( amount int(10) NOT NULL, day int(10), month TINYINT, year INT, id int(10) NOT NULL);";
-			 insert2 = "INSERT INTO l"+ this-> id_product ->Text + " VALUES ('"+ this-> amount ->Text + "' , '" + this-> day ->Text + "' , '" + this-> month ->Text + "' , '" + this-> year ->Text + "' , '" + this-> id_product ->Text +"' );";
-			 MySqlConnection^ conDataBase=gcnew MySqlConnection(constring);
-			 MySqlCommand^ cmdDataBase1=gcnew MySqlCommand(insert1, conDataBase);
-			 MySqlCommand^ cmdDataBase2=gcnew MySqlCommand(create_table,conDataBase);
-			 MySqlCommand^ cmdDataBase3=gcnew MySqlCommand(insert2, conDataBase);
-
-			 MySqlDataReader^ myReader;
-			 MySqlDataReader^ myReader2;
-			 MySqlDataReader^ myReader3;
-			 conDataBase->Open();
-
-			 try{
-				
-				myReader=cmdDataBase1->ExecuteReader();
-				while(myReader->Read()) 
-					{
-					 }
-			    myReader->Close();
-				
-				
-				myReader2=cmdDataBase2->ExecuteReader();
-				while(myReader2->Read()) 
-					{
-					 }
-				myReader2->Close();
 
 
-				myReader3=cmdDataBase3->ExecuteReader();
-				while(myReader3->Read()) 
-					{
-					 }
-				myReader3->Close();
 
-				MessageBox::Show("Produkt dodany!");
-				
-			 }
-			 catch(Exception^ex){
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 
-				 MessageBox::Show(ex->Message);
-			 }
+			 // Find the number for id for the new product 
+			 int id = count_number_of_tables() + 1;
 			 
+			 // Add new product to the main list of products 
+			 mySQL_do_command("INSERT INTO list VALUES ('"+ id.ToString() + "' , '" + this-> name_product ->Text + "' , '" + this-> category ->Text + "' );");
+			 
+			 // Create table for this new product with infromation about amount, date and id
+			 mySQL_do_command("CREATE TABLE l"+ id.ToString() + " ( amount int(10) NOT NULL, day int(10), month TINYINT, year INT, id int(10) NOT NULL);");
+			 
+			 // Add amount to table of new product
+			 mySQL_do_command("INSERT INTO l"+ id.ToString() + " VALUES ('"+ this-> amount ->Text + "' , '" + this-> day ->Text + "' , '" + this-> month ->Text + "' , '" + this-> year ->Text + "' , '" + id.ToString() +"' );");
+			
+			 MessageBox::Show("Produkt dodany!");
+			 
+		 }
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+			
+			 Form2^ f2 = gcnew Form2();
+			 f2 -> ShowDialog();
+			
 		 }
 };
 }
